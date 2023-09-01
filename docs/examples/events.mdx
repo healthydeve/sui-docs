@@ -6,12 +6,11 @@ slug: /events-example
 
 Events are the main way to track actions on chain.
 
-A user can use events emitted by a smart contract by calling the query_events api call and
-track events emitted by a specific package, module, and function. These are especially helpful in
-tracking what goes on in the ecosystem like if we are interested in how many capys got minted we can
-execute the following curl.
+You can use `query_events` to track the events that a specific package, module, or function emits. 
+Using this function call is especially helpful when you want to track network activity. For example,
+you can track the minting of SuiFrens Capys as they happen using the following cURL command:
 
-```
+```sh
 curl --location 'https://fullnode.mainnet.sui.io' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -27,10 +26,10 @@ curl --location 'https://fullnode.mainnet.sui.io' \
 }'
 ```
 
-See https://docs.sui.io/build/event_api for more details about the API.
+See [Sui Events API](https://docs.sui.io/build/event_api) for more information.
 
-The below example is a continuation of the the example smart contract for events, and note that we can build
-different kinds of events to be emitted.
+The following example is a continuation of the example smart contract for events. If needed, you could
+adjust the example to emit different kinds of events.
 
 ```sui-move
 /// Extended example of a shared object. Now with addition of events!
